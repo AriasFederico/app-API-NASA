@@ -1,0 +1,16 @@
+// @mixin mobile(){
+//     @media screen and (max-width:400px){
+//         @content;
+//     }
+// }
+// no creo que sea necesario este mixin, ya que estoy creando la pagina firstmobile
+
+@mixin desktop(){
+    @media screen and (min-width:680px){
+        @content;
+    }
+}
+
+@mixin color($argument : #313131){
+    color: $argument;
+}

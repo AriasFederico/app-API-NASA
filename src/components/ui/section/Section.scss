@@ -1,0 +1,17 @@
+@import '../../../styles/mixins';
+.Section {
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+
+    @include desktop(){
+    }
+
+    &-span {
+        @include color()
+    }
+
+    &-hr {
+    }
+}

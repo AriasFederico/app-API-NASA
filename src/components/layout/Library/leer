@@ -1,0 +1,8 @@
+// la api funciona perfecto con el hook useGetLibrary, mostrando 5 resultados por lo que pase en la url
+// const { data, loading, error } = useGetApod();
+// if (loading) return <p>loading...</p>;
+// if (error) return <p>Error!</p>;
+// console.log(data)
+// leer bien como adentrarme al objeto que contiene la info de la api
+// const { destructuracion } = data || {};  APLICAR ESTA LÓGICA TAMBIEN
+

@@ -1,0 +1,52 @@
+@import '../../../../styles/mixins';
+.NavList-mobile {
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 2rem;
+    margin-top: 5rem;
+
+    @include desktop(){
+        display: none;
+    }
+
+    // temporal
+    border: 1px solid gray;
+
+    &-ol {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    &-li {
+
+    }
+
+    &-link {
+        color: red;
+    }
+}
+
+.NavList-desktop {
+    display: none;
+
+    @include desktop(){
+        display: block;
+    }
+
+    &-li {
+        
+    }
+
+    &-ol {
+
+    }
+
+    &-link {
+        color: green;
+    }
+
+}
