@@ -1,7 +1,7 @@
 import { useGetLibrary } from '../../../hooks/api/useGetLibrary.js';
-import { Section } from '../../ui/Section/Section.jsx';
 import { SearchItem } from '../../ui/search/SearchItem.jsx';
 import { useShearch } from '../../../hooks/ui/useShearch.js';
+import { NewSection } from '../../ui/section/NewSection.jsx';
 import './LibraryNasa.scss';
 import { useState } from 'react';
 import { Modal } from './modal/Modal.jsx';
@@ -57,7 +57,7 @@ export const LibrayNasa = () => {
 
 	return (
 		<section className='LibraryNasa' id='library'>
-			<Section newSection={'NASA Image Library'} />
+			<NewSection newSection={'NASA Image Library'} />
 			<div className='LibraryNasa-content'>
 				<div className='LibraryNasa-title-sub'>
 					<h3 className='LibraryNasa-title'>NASA Media Explorer</h3>

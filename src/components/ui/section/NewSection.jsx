@@ -1,5 +1,5 @@
-import './Section.scss';
-export const Section = ({ newSection }) => {
+import './NewSection.scss';
+export const NewSection = ({ newSection }) => {
 	return (
 		<div className='Section'>
 			<span className='Section-span'>{newSection}</span>

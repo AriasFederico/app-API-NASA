@@ -1,6 +1,6 @@
 import './Apod.scss';
 import { useGetApod } from '../../../hooks/api/useGetApod';
-import { Section } from '../../ui/Section/Section';
+import { NewSection } from '../../ui/section/NewSection';
 import { Loading } from '../../ui/loading/Loading';
 export const Apod = () => {
 	const { data, loading, error } = useGetApod();
@@ -12,7 +12,7 @@ export const Apod = () => {
 
 	return (
 		<section className='Apod' id='apod'>
-			<Section newSection={'Astronomy Picture of the Day'} />
+			<NewSection newSection={'Astronomy Picture of the Day'} />
 			<div className='Apod-content'>
 				<div className='Apod-info'>
 					<span>{date}</span>
