@@ -1,4 +1,4 @@
-export const SearchSvg = ({ className }) => {
+export const SvgSearch = ({ className }) => {
 	return (
 		<svg
 			xmlns='http://www.w3.org/2000/svg'

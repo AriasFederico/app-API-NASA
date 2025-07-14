@@ -1,6 +1,6 @@
 import './SearchItem.scss';
-import { SearchSvg } from './searchSvg/searchSvg';
 import { ResetSvg } from './resetSvg/ResetSvg';
+import { SvgSearch } from './searchSvg/SvgSearch';
 
 // en la siguiente linea estoy importando el manejo de input y boton reset
 export const SearchItem = ({
@@ -20,7 +20,7 @@ export const SearchItem = ({
 			/>
 
 			<button type='submit' className='SearchItem-submit'>
-				<SearchSvg className={'SearchItem-submit-svg'} />
+				<SvgSearch className={'SearchItem-submit-svg'} />
 			</button>
 			<button onClick={reset} className='SearchItem-reset'>
 				<ResetSvg className={'SearchItem-reset-svg'} />
