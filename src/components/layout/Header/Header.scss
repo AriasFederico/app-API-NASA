@@ -1,9 +1,9 @@
 .Header {
-    // mi idea es dejar el nav donde esta sin duplicarlo, ponerle un estilo en desktop y otro estilo para el mobile (posicion absoluta, etc)
-
     display: flex;
+    max-width: 1280px;
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem;
+    margin: 0 auto;
 
 }

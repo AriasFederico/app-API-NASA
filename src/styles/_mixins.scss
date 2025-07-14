@@ -6,7 +6,7 @@
 // no creo que sea necesario este mixin, ya que estoy creando la pagina firstmobile
 
 @mixin desktop(){
-    @media screen and (min-width:680px){
+    @media screen and (min-width:1280px){
         @content;
     }
 }

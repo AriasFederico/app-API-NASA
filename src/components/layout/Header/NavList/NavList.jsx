@@ -8,9 +8,9 @@ export const NavList = ({ styles }) => {
 			<ol className={`${styles}-ol`}>
 				{navLinks.map(({ id, text, href }) => (
 					<li key={id} className={`${styles}-li`}>
-						<Link to={href} className={`${styles}-link`}>
+						<a href={href} className={`${styles}-link`}>
 							{text}
-						</Link>
+						</a>
 					</li>
 				))}
 			</ol>

@@ -1,7 +1,7 @@
 export const headerContent = {
 	navLinks: [
-		{ id: 'imageDay', text: 'Image of Day', href: '#' },
-		{ id: 'library', text: 'Library', href: '#' },
+		{ id: 'imageDay', text: 'IMAGE OF DAY', href: '#apod' },
+		{ id: 'library', text: 'LIBRARY	', href: '#library' },
 	],
 };
 

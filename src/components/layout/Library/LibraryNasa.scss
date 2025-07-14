@@ -1,4 +1,5 @@
 @import '../../../styles/mixins';
+@import '../../../styles/variables';
 
 .LibraryNasa {
     max-width: 1280px;
@@ -8,7 +9,7 @@
 
     @include desktop(){
       margin: 2rem auto;
-      padding: 0;
+      padding: 0 1rem;
     }
 
     &-content {
@@ -29,16 +30,41 @@
     }
 
     &-library {
+
+    @include desktop(){
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: .5rem;
+
+    }
     }
         
     &-item {
         width: 100%;
         object-fit: cover;
         object-position: center;
-        max-height: 280px;
+        height: 550px;
+        filter: brightness(70%);
     }
+
+    &-item:hover {
+        transition: .3s all ease;
+        filter: brightness(100%);
+    }
+
+    &-image {
+        cursor: pointer;
+        position: relative;
+    }
+
+    &-load-more {
+        color: white;
+        background-color: map-get($colors, 'primary' );
+        padding: .5rem;
+        border: none;
+        padding: .5rem 1rem;
+        cursor: pointer;
+    }
+
 }

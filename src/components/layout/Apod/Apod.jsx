@@ -4,13 +4,14 @@ import { Section } from '../../ui/Section/Section';
 import { Loading } from '../../ui/loading/Loading';
 export const Apod = () => {
 	const { data, loading, error } = useGetApod();
+	// agragar loading component
 	if (loading) return <p>loading...</p>;
 	if (error) return <p>Error!</p>;
 
 	const { title, explanation, date, url, copyright, media_type } = data || {};
 
 	return (
-		<section className='Apod'>
+		<section className='Apod' id='apod'>
 			<Section newSection={'Astronomy Picture of the Day'} />
 			<div className='Apod-content'>
 				<div className='Apod-info'>
@@ -28,7 +29,11 @@ export const Apod = () => {
 					</p>
 				</div>
 
-				<img src={url} alt={title} className='Apod-img' />
+				{/* <a href={url} target='_BLANK' className='Apod-link-img'> */}
+				<a href={url} className='Apod-img-link' target='_BLANK'>
+					<img src={url} alt={title} className='Apod-img' />
+				</a>
+				{/* </a> */}
 			</div>
 		</section>
 	);

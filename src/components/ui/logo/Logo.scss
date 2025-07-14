@@ -1,6 +1,5 @@
 @import '../../../styles/variables';
 .Logo {
-    width: 2.5rem;
-    height: 2.5rem;    
-    color: map-get($colors, 'primary-color' );
+    color: map-get($colors, 'primary' );
+    user-select: none;
 }

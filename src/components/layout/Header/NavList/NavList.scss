@@ -6,7 +6,7 @@
     left: 0;
     width: 100vw;
     padding: 2rem;
-    margin-top: 5rem;
+    margin-top: 6rem;
 
     @include desktop(){
         display: none;
@@ -26,27 +26,30 @@
     }
 
     &-link {
-        color: red;
+        @include color();
+        font-weight: bold;
+
     }
 }
 
 .NavList-desktop {
     display: none;
+    // background-color: red;
 
     @include desktop(){
         display: block;
     }
 
-    &-li {
-        
-    }
 
     &-ol {
-
+        display: flex;
+        gap: 2rem;
     }
 
     &-link {
-        color: green;
+        // font-size: 1rem;
+        font-weight: bold;
+        @include color()
     }
 
 }

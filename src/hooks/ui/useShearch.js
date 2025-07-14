@@ -1,14 +1,31 @@
 import { useState } from 'react';
 
 export const useShearch = () => {
-	const [inputValue, setInputValue] = useState('');
+	const [searchParams, setSearchParams] = useState({
+		query: '',
+		inputValue: '',
+	});
+
+	const { query, inputValue } = searchParams;
 
 	const handleChange = (e) => {
-		setInputValue(e.target.value);
+		setSearchParams((prev) => ({ ...prev, inputValue: e.target.value }));
+	};
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		setSearchParams((prev) => ({ ...prev, query: inputValue }));
+	};
+
+	const resetSeatch = () => {
+		setSearchParams({ query: '', inputValue: '' });
 	};
 
 	return {
-		handleChange,
 		inputValue,
+		query,
+		handleChange,
+		handleSubmit,
+		resetSeatch,
 	};
 };
