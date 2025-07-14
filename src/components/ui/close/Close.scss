@@ -1,13 +1,14 @@
-@import '../../../styles/mixins';
-@import '../../../styles/variables';
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
+@use 'sass:map';
 
 .Close {
     width: 1.7rem;
     height: 1.7rem;
-    color: map-get($colors, 'black' );
+    color: map.get($colors, 'black' );
 
     @include desktop(){
         display: none;
     } 
-
 }

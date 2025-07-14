@@ -1,39 +1,31 @@
-@import '../../../styles/mixins';
+@use '../../../styles/mixins' as *;
+@use 'sass:map';
+
 .Apod {
     max-width: 1280px;
     display: flex;
     flex-direction: column;
     padding: 0 1rem;
-    
-    @include desktop(){
-        margin: 2rem auto;
-        padding: 0 1rem;
-    }
 
     &-h3 {
         font-size: 1.8rem;
         line-height: 1.5;
-        @include color()
-    }
-
-    &-link-img {
-        // width: 50%;
-        // max-height: 400px;
+        @include color();
     }
 
     &-img-link {
         display: inline-block;
         width: 100%;
-
-        @include desktop(){
-            width: 50%;
+        
+        @include desktop() {
+            width: 50%;  
         }
     }
 
     &-img {
         width: 100%;
-        object-fit: cover;
         height: 450px;
+        object-fit: cover;
     }
 
     &-info {
@@ -41,24 +33,22 @@
         flex-direction: column;
         gap: 1rem;
         margin-bottom: 1rem;
-        @include color();
         line-height: 1.6;
-        @include desktop(){
+        @include color();
+        
+        @include desktop() {
             margin-bottom: 0;
             width: 50%;
         }
     }
 
     &-nasa-link {
-        // @include color();
         text-decoration: underline;
+        
+        &:visited {
+            text-decoration: underline;
+        }
     }
-
-    &-nasa-link:visited {
-        // @include color();
-        text-decoration: underline;
-    }
-
 
     &-content {
         display: flex;
@@ -66,9 +56,14 @@
         align-items: center;
         justify-content: space-between;
         
-        @include desktop(){
+        @include desktop() {
             flex-direction: row;
             gap: 2.5rem;
         }
+    }
+
+    @include desktop() {
+        margin: 2rem auto;
+        padding: 0 1rem;
     }
 }

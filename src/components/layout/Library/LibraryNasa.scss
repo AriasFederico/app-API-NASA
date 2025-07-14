@@ -1,5 +1,6 @@
-@import '../../../styles/mixins';
-@import '../../../styles/variables';
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+@use 'sass:map';
 
 .LibraryNasa {
     max-width: 1280px;
@@ -7,11 +8,7 @@
     flex-direction: column;
     padding: 0 1rem;
 
-    @include desktop(){
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
+    // Bloques anidados
     &-content {
         display: flex;
         flex-direction: column;
@@ -30,27 +27,26 @@
     }
 
     &-library {
-
-    @include desktop(){
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: .5rem;
-
+        // Estilos para móvil (si los hay) irían aquí
+        @include desktop() {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: .5rem;
+        }
     }
-    }
-        
+    
     &-item {
         width: 100%;
+        height: 550px;
         object-fit: cover;
         object-position: center;
-        height: 550px;
         filter: brightness(70%);
-    }
-
-    &-item:hover {
-        transition: .3s all ease;
-        filter: brightness(100%);
+        
+        &:hover {
+            transition: .3s all ease;
+            filter: brightness(100%);
+        }
     }
 
     &-image {
@@ -60,11 +56,15 @@
 
     &-load-more {
         color: white;
-        background-color: map-get($colors, 'primary' );
-        padding: .5rem;
+        background-color: map.get($colors, 'primary');
+        padding: .5rem 1rem;  // Eliminé el padding duplicado
         border: none;
-        padding: .5rem 1rem;
         cursor: pointer;
     }
 
+    // Media queries al final (regla general)
+    @include desktop() {
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
 }

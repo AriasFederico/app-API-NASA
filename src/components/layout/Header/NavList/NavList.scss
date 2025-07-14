@@ -1,55 +1,32 @@
-@import '../../../../styles/mixins';
-.NavList-mobile {
-    position: absolute;
-    background-color: white;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    padding: 2rem;
-    margin-top: 6rem;
+@use '../../../../styles/mixins' as *;
 
-    @include desktop(){
+.NavList {
+    &-mobile, &-desktop {
+        &-ol {
+            display: flex;
+            gap: 2rem;
+        }
+        &-link {
+            @include color();
+            font-weight: bold;
+        }
+    }
+
+    &-mobile {
+        position: absolute;
+        background-color: white;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        padding: 2rem;
+        margin-top: 6rem;
+        outline: 1px solid gray; 
+
+        @include desktop() { display: none; }
+    }
+
+    &-desktop {
         display: none;
+        @include desktop() { display: block; }
     }
-
-    // temporal
-    border: 1px solid gray;
-
-    &-ol {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-    }
-
-    &-li {
-
-    }
-
-    &-link {
-        @include color();
-        font-weight: bold;
-
-    }
-}
-
-.NavList-desktop {
-    display: none;
-    // background-color: red;
-
-    @include desktop(){
-        display: block;
-    }
-
-
-    &-ol {
-        display: flex;
-        gap: 2rem;
-    }
-
-    &-link {
-        // font-size: 1rem;
-        font-weight: bold;
-        @include color()
-    }
-
 }

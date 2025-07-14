@@ -1,9 +1,9 @@
-@import '../../../styles/mixins';
+@use '../../../styles/mixins' as *;
 .BurgerMenu {
     width: 2.5rem;
     height: 2.5rem;
-
     @include desktop(){
         display: none;
     }
+
 }

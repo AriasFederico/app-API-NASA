@@ -1,5 +1,6 @@
-@import '../../../styles/variables';
-@import '../../../styles/mixins';
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+@use 'sass:map';
 
 .SearchItem {
 
@@ -12,10 +13,10 @@
         font-size: 1rem;
         width: 100%;
         outline: none;
-
-       @include desktop(){
-        width: 25%;
-    }
+        
+        @include desktop(){
+         width: 25%;
+     }
 
     }
 
@@ -26,7 +27,7 @@
         align-items: center;
         justify-content: center;
         border: none;
-        background-color: map-get($colors, 'primary' );
+        background-color: map.get($colors, 'primary' );
         cursor: pointer;
         transition: all .3s ease;
     }

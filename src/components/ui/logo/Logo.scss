@@ -1,5 +1,7 @@
-@import '../../../styles/variables';
+@use '../../../styles/variables' as *;
+@use 'sass:map';
+
 .Logo {
-    color: map-get($colors, 'primary' );
+    color: map.get($colors, 'primary' );
     user-select: none;
 }

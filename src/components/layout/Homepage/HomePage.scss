@@ -1,4 +1,6 @@
-@import '../../../styles/mixins';
+@use '../../../styles/mixins' as *;
+@use 'sass:map';
+
 .HomePage {
     display: flex;
     gap: 2.5rem;
